@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+.hamburguesa {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    cursor: pointer;
+}
+
+.hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(33, 75, 201);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media query para pantallas más pequeñas (máximo 600px de ancho) */
+@media (max-width: 600px) {
+    nav ul {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        flex-direction: column;
+        background-color: rgb(33, 75, 201);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 150px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.verMenu {
+        display: flex; /* Mostrar el menú cuando la clase 'verMenu' está presente */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburguesa {
+        display: block; /* Mostrar el icono hamburguesa en pantallas pequeñas */
+    }
+}
